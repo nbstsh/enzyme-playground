@@ -8,6 +8,10 @@ it('renders without creasing', () => {
 
 it('renders welcome message', () => {
 	const wrapper = shallow(<App />);
+
 	const welcomeMessage = <h2>Welcome to React!!!</h2>;
 	expect(wrapper.contains(welcomeMessage)).toEqual(true);
+
+	// using jest-enzyme
+	expect(wrapper).toContainReact(welcomeMessage);
 });
